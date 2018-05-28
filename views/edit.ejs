@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+    <% include partials/head %>
+  </head>
+  <body class="login">
+    <div class="container">
+      <div class="col-sm-6 mx-auto">
+        <div class="card mt-5">
+          <div class="card-body">
+            <!-- messages -->
+            <h1 class="text-center">
+              <span class="fa fa-sign-in"></span> Edit Profile
+            </h1>
+
+            <!-- form -->
+            <form action="/profile/edit" method="POST">
+              <div class="form-group">
+                <label for="name">email</label>
+                <input type="name" name="name" class="form-control" value="<%= user.name %>">
+              </div>
+              <div class="form-group">
+                <label for="Image">Image</label>
+                <input type="text" name="image" class="form-control" value = "<%= user.image %>">
+              </div>
+              <button type = "submit" class="btn btn-dark btn-lg">Save</button>
+            </form>
+
+            <hr>
+            <div class="text-center">
+              <p>Need an account? <a href="/signup">Signup</a></p>
+              <p>Or go <a href="/">home</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
